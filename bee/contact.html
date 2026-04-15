@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Core Hive</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] section,
+        [data-theme="dark"] .card {
+            background-color: #000000 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+    </style>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- HERO BANNER -->
+<section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('images/bg6.jpg');">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-[#064E3B]/75"></div>
+
+  <div class="max-w-3xl mx-auto px-6 py-32 relative z-10 flex flex-col items-center text-center">
+
+    <h1 class="text-4xl md:text-5xl font-bold text-[#FEF3C7] leading-tight">
+      Get in Touch With Core Hive
+    </h1>
+
+    <p class="mt-6 text-lg text-[#FEF3C7]/90">
+      Have questions about rooftop beekeeping, hive installation, or honey harvesting?  
+      Our experts are here to guide you every step of the way.
+    </p>
+
+    <a href="contact.html"
+      class="btn mt-8 inline-block bg-[#FEF3C7] text-[#064E3B] font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-opacity-90 transition">
+      Contact Us
+    </a>
+
+  </div>
+
+</section>
+<!-- SECTION1 -->
+ <section class="py-24 bg-[#FEF3C7]">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <span class="text-[#064E3B] font-semibold uppercase tracking-wider">
+        Contact Information
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#064E3B] mt-4">
+        Connect With Our Beekeeping Experts
+      </h2>
+      <p class="text-[#064E3B]/70 mt-4 max-w-2xl mx-auto">
+        Reach out for consultations, hive setup, or any beekeeping queries.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+
+      <!-- Phone -->
+      <div class="card border border-white/50 bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center bg-[#064E3B] text-[#FEF3C7] rounded-full">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <h4 class="font-bold text-[#064E3B]">Call Us</h4>
+        <p class="text-[#064E3B]/70 mt-2">+91 98765 43210</p>
+      </div>
+
+      <!-- Email -->
+      <div class="card border border-white/50 bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center bg-[#064E3B] text-[#FEF3C7] rounded-full">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <h4 class="font-bold text-[#064E3B]">Email Us</h4>
+        <p class="text-[#064E3B]/70 mt-2">info@corehive.com</p>
+      </div>
+
+      <!-- Location -->
+      <div class="card border border-white/50 bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center bg-[#064E3B] text-[#FEF3C7] rounded-full">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <h4 class="font-bold text-[#064E3B]">Visit Us</h4>
+        <p class="text-[#064E3B]/70 mt-2">Tamil Nadu, India</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- SECTION2 -->
+ <section class="py-24 bg-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <span class="text-[#064E3B] font-semibold uppercase tracking-wider">
+        Send a Message
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#064E3B] mt-4">
+        Book Your Hive Consultation
+      </h2>
+      <p class="text-[#064E3B]/70 mt-4 max-w-2xl mx-auto">
+        Fill out the form and our team will help you start your rooftop beekeeping journey.
+      </p>
+    </div>
+
+    <form class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
+
+      <input type="text" placeholder="Your Name"
+        class="border border-[#064E3B]/30 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#064E3B] outline-none">
+
+      <input type="email" placeholder="Email Address"
+        class="border border-[#064E3B]/30 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#064E3B] outline-none">
+
+      <input type="tel" placeholder="Phone Number"
+        class="border border-[#064E3B]/30 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#064E3B] outline-none">
+
+      <input type="text" placeholder="Subject"
+        class="border border-[#064E3B]/30 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#064E3B] outline-none">
+
+      <textarea rows="5" placeholder="Your Message"
+        class="md:col-span-2 border border-[#064E3B]/30 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#064E3B] outline-none"></textarea>
+
+      <div class="md:col-span-2 text-center">
+        <button class="bg-[#064E3B] text-[#FEF3C7] px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition">
+          Send Message
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+<!-- SECTION3 -->
+ <section class="bg-white py-24 text-[#064E3B]">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">
+        Find Us on the Map
+      </h2>
+      <p class="text-[#064E3B]/70 max-w-2xl mx-auto">
+        Visit our location or schedule a consultation to start your rooftop beekeeping journey.
+      </p>
+    </div>
+
+    <!-- Map Container -->
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-[#064E3B]/10">
+
+      <!-- Google Map -->
+      <iframe
+        src="https://www.google.com/maps?q=Tamil+Nadu+India&output=embed"
+        width="100%" height="450"
+        class="w-full border-0"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+     <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                },
+            },
+        }
+
+    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

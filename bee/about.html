@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Core Hive</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] section,
+        [data-theme="dark"] .card {
+            background-color: #000000 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+    </style>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- HERO BANNER -->
+    <section class="relative min-h-[90vh] flex items-center bg-[#FEF3C7] text-[#064E3B] pt-24 md:pt-28 overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="text-center lg:text-left">
+
+                <!-- Tag -->
+                <span
+                    class="inline-block mb-4 md:mb-6 px-4 py-2 border border-[#064E3B] text-[10px] md:text-xs tracking-[0.3em] uppercase font-bold">
+                    About Us
+                </span>
+
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 md:mb-6">
+                    Bringing Nature <br class="hidden sm:block">
+                    Back to the City 🐝
+                </h1>
+
+                <!-- Description -->
+                <p class="text-base md:text-lg text-[#064E3B]/80 mb-6 max-w-xl mx-auto lg:mx-0">
+                    We transform urban spaces into thriving ecosystems through sustainable beekeeping, reconnecting
+                    people with nature.
+                </p>
+
+                <!-- Points -->
+                <div class="space-y-2 text-sm md:text-base font-medium">
+                    <p>✔ Rooftop Hive Experts</p>
+                    <p>✔ Sustainable & Eco-Friendly</p>
+                    <p>✔ Trusted by Urban Communities</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="relative">
+
+                <!-- Image -->
+                <div class="rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
+                    <img src="images/bg2.webp"
+                        class="w-full h-[260px] sm:h-[320px] md:h-[400px] lg:h-[480px] object-cover"
+                        alt="About Beekeeping">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SECTION1 -->
+    <section class="bg-white py-24 text-[#064E3B]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    Our Impact in Numbers
+                </h2>
+                <p class="max-w-2xl mx-auto text-[#064E3B]/70">
+                    Real results from our mission to bring sustainable beekeeping to urban spaces.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+
+                <!-- Stat 1 -->
+                <div>
+                    <h3 class="text-3xl md:text-5xl font-black mb-2">500+</h3>
+                    <p class="text-sm text-[#064E3B]/70">Hives Installed</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div>
+                    <h3 class="text-3xl md:text-5xl font-black mb-2">1200kg+</h3>
+                    <p class="text-sm text-[#064E3B]/70">Honey Harvested</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div>
+                    <h3 class="text-3xl md:text-5xl font-black mb-2">300+</h3>
+                    <p class="text-sm text-[#064E3B]/70">Happy Clients</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div>
+                    <h3 class="text-3xl md:text-5xl font-black mb-2">50+</h3>
+                    <p class="text-sm text-[#064E3B]/70">Workshops</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SECTION2 -->
+    <section class="bg-[#FEF3C7] py-24 text-[#064E3B]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    Our Mission & Vision
+                </h2>
+                <p class="max-w-2xl mx-auto text-[#064E3B]/80">
+                    Driven by purpose, we aim to create sustainable ecosystems in every urban space.
+                </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <!-- Mission -->
+                <div
+                    class="card group bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition border border-[#064E3B]/10">
+
+                    <div
+                        class="w-16 h-16 mb-6 flex items-center justify-center bg-[#064E3B] text-[#FEF3C7] rounded-xl text-2xl group-hover:scale-110 transition">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+
+                    <p class="text-[#064E3B]/70 leading-relaxed">
+                        To transform urban rooftops into thriving ecosystems through sustainable beekeeping, supporting
+                        biodiversity and promoting eco-friendly living.
+                    </p>
+
+                </div>
+
+                <!-- Vision -->
+                <div
+                    class="card group bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition border border-[#064E3B]/10">
+
+                    <div
+                        class="w-16 h-16 mb-6 flex items-center justify-center bg-[#064E3B] text-[#FEF3C7] rounded-xl text-2xl group-hover:scale-110 transition">
+                        <i class="bi bi-eye"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+
+                    <p class="text-[#064E3B]/70 leading-relaxed">
+                        To build greener cities where every rooftop contributes to environmental balance, creating a
+                        future where nature and urban life coexist harmoniously.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION3 -->
+    <section class="bg-white py-24 text-[#064E3B]">
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT IMAGE -->
+            <div class="relative order-2 lg:order-1">
+
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="images/img5.avif"
+                        class="w-full h-[280px] sm:h-[350px] md:h-[420px] object-cover" alt="Our Story">
+                </div>
+
+                <!-- Floating Badge -->
+                <div
+                    class="absolute -bottom-5 -right-5 bg-[#064E3B] text-[#FEF3C7] px-5 py-3 rounded-lg text-xs font-bold shadow-lg">
+                    Since 2020
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+
+                <!-- Tag -->
+                <span
+                    class="inline-block mb-4 px-4 py-2 border border-[#064E3B] text-xs tracking-[0.3em] uppercase font-bold">
+                    Our Story
+                </span>
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+                    From Rooftops to <br class="hidden sm:block"> Thriving Ecosystems 🐝
+                </h2>
+
+                <!-- Paragraphs -->
+                <p class="text-[#064E3B]/80 mb-4">
+                    What started as a small initiative to support urban biodiversity has grown into a mission-driven
+                    service helping people reconnect with nature.
+                </p>
+
+                <p class="text-[#064E3B]/80 mb-6">
+                    We believe rooftops are more than empty spaces—they are opportunities to create sustainable
+                    ecosystems, support pollination, and produce natural honey.
+                </p>
+
+                <!-- Highlights -->
+                <div class="grid grid-cols-2 gap-4 text-sm font-medium">
+                    <p>✔ Eco-driven mission</p>
+                    <p>✔ Expert beekeepers</p>
+                    <p>✔ Community focused</p>
+                    <p>✔ Sustainable impact</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SECTION4 -->
+    <section class="bg-[#FEF3C7] py-24 text-[#064E3B]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    Meet Our Experts
+                </h2>
+                <p class="max-w-2xl mx-auto text-[#064E3B]/80">
+                    Passionate professionals dedicated to sustainable urban beekeeping.
+                </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Member 1 -->
+                <div class="group text-center">
+
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="images/team1.avif"
+                            class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-500">
+
+                        <!-- Overlay -->
+                        <div
+                            class="absolute inset-0 bg-[#064E3B]/70 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
+                            <i class="bi bi-facebook text-white text-xl"></i>
+                            <i class="bi bi-instagram text-white text-xl"></i>
+                            <i class="bi bi-linkedin text-white text-xl"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg">Arjun Sharma</h3>
+                    <p class="text-sm text-[#064E3B]/70">Lead Beekeeper</p>
+
+                </div>
+
+                <!-- Member 2 -->
+                <div class="group text-center">
+
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="images/team2.avif"
+                            class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-[#064E3B]/70 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
+                            <i class="bi bi-facebook text-white text-xl"></i>
+                            <i class="bi bi-instagram text-white text-xl"></i>
+                            <i class="bi bi-linkedin text-white text-xl"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg">Priya Nair</h3>
+                    <p class="text-sm text-[#064E3B]/70">Sustainability Expert</p>
+
+                </div>
+
+                <!-- Member 3 -->
+                <div class="group text-center">
+
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="images/team3.avif"
+                            class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-[#064E3B]/70 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
+                            <i class="bi bi-facebook text-white text-xl"></i>
+                            <i class="bi bi-instagram text-white text-xl"></i>
+                            <i class="bi bi-linkedin text-white text-xl"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg">Rahul Verma</h3>
+                    <p class="text-sm text-[#064E3B]/70">Hive Specialist</p>
+
+                </div>
+
+                <!-- Member 4 -->
+                <div class="group text-center">
+
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <img src="images/team4.avif"
+                            class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-[#064E3B]/70 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
+                            <i class="bi bi-facebook text-white text-xl"></i>
+                            <i class="bi bi-instagram text-white text-xl"></i>
+                            <i class="bi bi-linkedin text-white text-xl"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg">Ananya Iyer</h3>
+                    <p class="text-sm text-[#064E3B]/70">Workshop Coordinator</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SECTION5 -->
+    <section class="relative bg-[#064E3B] py-24 text-[#FEF3C7] overflow-hidden">
+
+        <!-- Background Pattern (Optional Effect) -->
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%">
+                <defs>
+                    <pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="2" fill="#FEF3C7" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pattern)" />
+            </svg>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto text-center px-6">
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                Start Your Beekeeping <br class="hidden sm:block">
+                Journey Today 🐝
+            </h2>
+
+            <!-- Description -->
+            <p class="text-lg text-[#FEF3C7]/80 mb-10">
+                Transform your rooftop into a thriving ecosystem and enjoy fresh organic honey while supporting nature.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+                <a href="contact.html"
+                    class="btn px-10 py-4 text-xs font-bold uppercase tracking-widest bg-[#FEF3C7] text-[#064E3B] rounded hover:bg-opacity-90 transition">
+                    Get Started
+                </a>
+
+                <a href="services.html"
+                    class="btn1 px-10 py-4 text-xs font-bold uppercase tracking-widest border border-[#FEF3C7] rounded hover:bg-[#FEF3C7] hover:text-[#064E3B] transition">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                },
+            },
+        }
+
+    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

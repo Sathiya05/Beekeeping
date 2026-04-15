@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Core Hive</title>
+
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg: #FEF3C7;
+      --text: #064E3B;
+      --card-bg: white;
+      --nav-bg: white;
+      --nav-text: #064E3B;
+      --border: #064E3B;
+    }
+
+    [data-theme="dark"] {
+      --bg: black;
+      --text: #FEF3C7;
+      --card-bg: #1a1a1a;
+      --nav-bg: #111;
+      --nav-text: #FEF3C7;
+      --border: #FEF3C7;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      transition: .3s;
+    }
+
+    .card {
+      background: var(--card-bg);
+      color: var(--text);
+    }
+
+    /* Overrides for hardcoded text colors in dark mode */
+    [data-theme="dark"] .text-\[\#064E3B\] {
+      color: var(--text) !important;
+    }
+    [data-theme="dark"] .border-\[\#064E3B\] {
+      border-color: var(--border) !important;
+    }
+    [data-theme="dark"] .bg-\[\#FEF3C7\] {
+      background-color: #333 !important;
+    }
+    [data-theme="dark"] .hover\:bg-\[\#064E3B\]:hover {
+      background-color: var(--text) !important;
+      color: black !important;
+    }
+     [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    @media(max-width:821px) {
+      .card1 {
+        display: none;
+      }
+    }
+    
+  </style>
+  
+</head>
+
+<body class="font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="w-full shadow-md transition-colors" style="background: var(--nav-bg); color: var(--nav-text);">
+    <div class="max-w-4xl mx-auto px-6 flex items-center justify-between h-16">
+
+       <h1 class="text-2xl tracking-tighter">
+  <a href="index.html" class="flex items-center gap-3 group">
+    <div class="flex items-center justify-center w-10 h-10 transition-colors bg-[#064E3B] text-[#FEF3C7] rounded">
+      <i class="bi bi-bug text-xl leading-none"></i>
+    </div>
+    
+    <div class="font-black uppercase flex flex-col leading-none">
+      CORE <span class="font-light text-xs tracking-[0.3em]">HIVE</span>
+    </div>
+  </a>
+</h1>
+      <div class="flex gap-4 text-xl">
+        <button id="rtlToggle" class="h-10 border border-[#064E3B] px-3 text-[10px] font-black hover:bg-[#064E3B] rounded hover:text-[#FEF3C7] transition">
+        RTL</button>
+        <button id="theme-toggle" class="w-10 h-10 border border-[#064E3B] flex items-center justify-center rounded hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="flex justify-center items-center min-h-screen px-4 pt-8 mt-[-60px]">
+
+    <div class="flex flex-col lg:flex-row rounded-2xl shadow-xl overflow-hidden w-full max-w-4xl">
+
+      <!-- LEFT SIDE -->
+      <div class="hidden lg:flex lg:w-1/2 flex-col overflow-hidden card1">
+
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/bg5.avif"
+            class="w-full h-full object-cover">
+
+          <div class="absolute inset-0 bg-[#064E3B]/70"></div>
+
+          <div class="absolute bottom-4 left-6 text-[#FEF3C7]">
+            <span class="text-sm uppercase tracking-widest">Sustainable Living</span>
+            <h2 class="text-2xl font-bold">Urban Beekeeping</h2>
+          </div>
+        </div>
+
+        <div class="card p-8 flex flex-col justify-between flex-grow">
+
+          <h1 class="text-3xl font-bold mb-4">
+            Build Your Own Hive 🐝
+          </h1>
+
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div><i class="bi bi-flower1 mr-2"></i> Eco Friendly</div>
+            <div><i class="bi bi-shield-check mr-2"></i> Safe Setup</div>
+            <div><i class="bi bi-droplet mr-2"></i> Pure Honey</div>
+            <div><i class="bi bi-people mr-2"></i> Expert Support</div>
+          </div>
+
+          <div class="mt-6 border-l-4 border-[#064E3B] bg-[#FEF3C7] p-4 rounded">
+            <p class="italic text-sm">
+              “Bees are the backbone of our ecosystem.”
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT LOGIN -->
+      <div class="card lg:w-1/2 p-10 flex flex-col justify-center">
+
+        <div class="max-w-md mx-auto w-full">
+
+          <h2 class="text-2xl font-bold mb-6 text-center text-[#064E3B]">
+            Login to Core Hive
+          </h2>
+
+          <form class="space-y-4">
+
+  <input type="email" placeholder="Email Address"
+    class="w-full p-3 rounded-lg border border-[#064E3B]/30 focus:ring-2 focus:ring-[#064E3B] bg-transparent">
+
+  <div class="relative">
+    <input type="password" id="password" placeholder="Password"
+      class="w-full p-3 rounded-lg border border-[#064E3B]/30 pr-10 focus:ring-2 focus:ring-[#064E3B] bg-transparent">
+
+    <i class="bi bi-eye-slash absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-[#064E3B]"
+      id="togglePassword"></i>
+  </div>
+
+  <div class="flex justify-between text-sm">
+    <label class="flex items-center gap-2">
+      <input type="checkbox" class="bg-transparent border-[#064E3B]/30"> Remember me
+    </label>
+    <a href="#" class="text-[#064E3B] font-semibold">Forgot?</a>
+  </div>
+
+  <button class="w-full bg-[#064E3B] text-[#FEF3C7] py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors">
+    Sign In
+  </button>
+
+</form>
+
+          <div class="my-4 flex items-center">
+            <hr class="flex-grow">
+            <span class="px-2 text-sm">Or continue with</span>
+            <hr class="flex-grow">
+          </div>
+
+          <div class="flex gap-4">
+            <button class="btn1 flex-1 py-2 border rounded-lg hover:bg-[#FEF3C7]"><i class="bi bi-google"></i></button>
+            <button class="btn1 flex-1 py-2 border rounded-lg hover:bg-[#FEF3C7]"><i class="bi bi-facebook"></i></button>
+            <button class="btn1 flex-1 py-2 border rounded-lg hover:bg-[#FEF3C7]"><i class="bi bi-apple"></i></button>
+          </div>
+
+          <p class="mt-6 text-center text-sm">
+            New to Core Hive?
+            <a href="sign.html" class="font-semibold text-[#064E3B]">Create Account</a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    rtlToggle.onclick = () => {
+      document.documentElement.dir =
+        document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+    }
+
+    const btn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+
+    const updateUI = (theme) => {
+      document.documentElement.dataset.theme = theme;
+      themeIcon.className = theme === "dark" ? "bi bi-brightness-high-fill" : "bi bi-moon-fill";
+    };
+
+    btn.onclick = () => {
+      let theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      updateUI(theme);
+      localStorage.setItem("theme", theme);
+    }
+
+    // Init
+    updateUI(localStorage.getItem("theme") || "light");
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = password.type === 'password' ? 'text' : 'password';
+      password.type = type;
+      togglePassword.classList.toggle('bi-eye');
+    });
+  </script>
+
+</body>
+</html>

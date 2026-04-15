@@ -1,0 +1,7 @@
+[data-theme="dark"] footer div {
+  color: white !important;
+}
+
+[data-theme="dark"] footer {
+  background-color: #29292a !important;
+}
