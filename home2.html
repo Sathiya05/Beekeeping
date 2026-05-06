@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home2 - Core Hive</title>
+  <link rel="icon" href="images/logo.jpeg">
+  <script src="tailwind.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+
+    [dir="rtl"] .title {
+      margin-right: 20px !important;
+    }
+
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card {
+      background-color: #000000 !important;
+    }
+
+    [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] i,
+    [data-theme="dark"] label,
+    [data-theme="dark"] table,
+    [data-theme="dark"] th,
+    [data-theme="dark"] td,
+    [data-theme="dark"] div,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong,
+    [data-theme="dark"] .title2 {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] thead {
+      background-color: #064E3B !important;
+    }
+
+    [data-theme="dark"] .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    [data-theme="dark"] .tag-btn {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: #ffffff !important;
+    }
+  </style>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+
+  <!-- HERO BANNER -->
+  <section class="relative min-h-[100vh] flex items-center bg-[#FEF3C7] text-[#064E3B] pt-24 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+
+        <!-- Tag -->
+        <span class="inline-block mb-6 px-5 py-2 border border-[#064E3B] text-xs tracking-[0.3em] uppercase font-bold">
+          Urban Beekeeping
+        </span>
+
+        <!-- Heading -->
+        <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6">
+          Build Your Own <br>
+          Rooftop Apiary
+        </h1>
+
+        <!-- Description -->
+        <p class="text-lg text-[#064E3B]/80 mb-10 max-w-lg">
+          We help you install, manage, and enjoy sustainable beekeeping right at your home. Experience fresh honey and
+          eco-friendly living like never before.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+
+          <a href="contact.html"
+            class="px-8 py-4 text-xs font-bold uppercase tracking-widest bg-[#064E3B] text-[#FEF3C7] rounded hover:bg-opacity-90 transition">
+            Get Started
+          </a>
+
+          <a href="services.html"
+            class="px-8 py-4 text-xs font-bold uppercase tracking-widest border border-[#064E3B] rounded hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">
+            Explore Services
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="relative">
+
+        <!-- Image -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl">
+          <img src="images/img2.avif" class="w-full h-[500px] object-cover" alt="Beekeeping">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- SECTION2 -->
+  <section id="spotlight" class="bg-white py-24">
+    <div class="max-w-[1180px] mx-auto px-6 lg:px-12">
+
+      <div class="text-center mb-16 fade-up">
+        <span
+          class="inline-block text-[10px] font-bold tracking-[0.3em] uppercase border-[1.5px] border-[#064E3B] px-4 py-[5px] rounded-full mb-4 text-[#064E3B]">
+          Why Core Hive
+        </span>
+        <h2 class="text-4xl md:text-[3.5rem] font-semibold leading-[1.15] text-[#064E3B] mb-4">
+          The Smart Way to Keep Bees
+        </h2>
+        <p class="text-[0.95rem] text-[#064E3B]/75 max-w-[560px] mx-auto leading-[1.7]">
+          A deeper look at what makes our approach truly different for homes, hotels, and enterprises.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16 mb-24 fade-up">
+
+        <div class="rounded-[20px] overflow-hidden relative aspect-[4/3] shadow-2xl">
+          <img src="images/why_rooftop.png" alt="Rooftop Apiary Design" class="w-full h-full object-cover">
+          <div
+            class="btn absolute bottom-6 right-6 bg-white rounded-xl px-[18px] py-[10px] text-[0.72rem] font-bold text-[#064E3B] shadow-[0_8px_24px_rgba(6,78,59,0.15)] flex items-center gap-2 z-20">
+            <i class="btn bi bi-check-circle-fill text-[#047857]"></i> Rooftop Ready
+          </div>
+        </div>
+
+        <div>
+          <div class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#064E3B]/40 mb-2">01 / Feature</div>
+          <h3 class="text-3xl md:text-[2.4rem] font-semibold text-[#064E3B] mb-4 leading-[1.2]">
+            Tailored Rooftop Apiary Design
+          </h3>
+          <p class="text-[0.93rem] text-[#064E3B]/75 leading-[1.8] mb-6">
+            Every rooftop is different. Our team designs a custom beekeeping layout that fits your space perfectly —
+            whether it's a small terrace or a large commercial rooftop.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Structural safety assessment
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Wind & sun exposure analysis
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Regulatory compliance guidance
+            </li>
+          </ul>
+          <a href="services.html"
+            class="inline-block px-9 py-[14px] bg-[#064E3B] text-[#FEF3C7] text-[0.72rem] font-bold tracking-[0.18em] uppercase border-2 border-[#064E3B] rounded hover:bg-[#065f46] transition-colors">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16 mb-24 fade-up">
+
+        <div class="order-2 md:order-1">
+          <div class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#064E3B]/40 mb-2">02 / Feature</div>
+          <h3 class="text-3xl md:text-[2.4rem] font-semibold text-[#064E3B] mb-4 leading-[1.2]">
+            Monitor Your Hive in Real Time
+          </h3>
+          <p class="text-[0.93rem] text-[#064E3B]/75 leading-[1.8] mb-6">
+            Our smart IoT sensors stream live temperature, humidity, and bee activity data straight to your phone. Stay
+            connected to your hive no matter where you are.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> IoT-enabled hive sensors
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Mobile app & web dashboard
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Automated alerts & reports
+            </li>
+          </ul>
+          <a href="services.html"
+            class="inline-block px-9 py-[14px] bg-[#064E3B] text-[#FEF3C7] text-[0.72rem] font-bold tracking-[0.18em] uppercase border-2 border-[#064E3B] rounded hover:bg-[#065f46] transition-colors">
+            See the App
+          </a>
+        </div>
+
+        <div class="order-1 md:order-2 rounded-[20px] overflow-hidden relative aspect-[4/3] shadow-2xl">
+          <img src="images/why_monitoring.png" alt="Real-Time Hive Monitoring App" class="w-full h-full object-cover">
+          <div
+            class="btn absolute bottom-6 right-6 bg-white rounded-xl px-[18px] py-[10px] text-[0.72rem] font-bold text-[#064E3B] shadow-[0_8px_24px_rgba(6,78,59,0.15)] flex items-center gap-2 z-20">
+            <i class="btn bi bi-check-circle-fill text-[#047857]"></i> Live Dashboard
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16 fade-up">
+
+        <div class="rounded-[20px] overflow-hidden relative aspect-[4/3] shadow-2xl">
+          <img src="images/why_harvest.png" alt="Honey Harvest and Branding" class="w-full h-full object-cover">
+          <div
+            class="btn absolute bottom-6 right-6 bg-white rounded-xl px-[18px] py-[10px] text-[0.72rem] font-bold text-[#064E3B] shadow-[0_8px_24px_rgba(6,78,59,0.15)] flex items-center gap-2 z-20">
+            <i class="btn bi bi-check-circle-fill text-[#047857]"></i> Lab Tested
+          </div>
+        </div>
+
+        <div>
+          <div class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#064E3B]/40 mb-2">03 / Feature</div>
+          <h3 class="text-3xl md:text-[2.4rem] font-semibold text-[#064E3B] mb-4 leading-[1.2]">
+            Harvest & Brand Your Own Honey
+          </h3>
+          <p class="text-[0.93rem] text-[#064E3B]/75 leading-[1.8] mb-6">
+            From hive to jar — we handle the harvest, filtration, and bottling. You can even create your own branded
+            label and sell or gift your rooftop honey.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Cold-extraction process
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Lab-tested for purity
+            </li>
+            <li class="flex items-center gap-2 text-[0.85rem] font-medium text-[#064E3B]">
+              <i class="bi bi-check-circle-fill text-[#047857] text-base"></i> Custom branding options
+            </li>
+          </ul>
+          <a href="services.html"
+            class="inline-block px-9 py-[14px] bg-[#064E3B] text-[#FEF3C7] text-[0.72rem] font-bold tracking-[0.18em] uppercase border-2 border-[#064E3B] rounded hover:bg-[#065f46] transition-colors">
+            Start Harvesting
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- SECTION3 -->
+  <section id="impact" class="bg-[#064E3B] py-24 relative overflow-hidden z-0">
+
+    <div class="absolute -top-8 -right-12 text-[18rem] opacity-5 pointer-events-none leading-none z-[-1] select-none">
+      🐝
+    </div>
+
+    <div class="max-w-[1180px] mx-auto px-6 lg:px-12">
+
+      <div class="text-center mb-16 fade-up">
+        <span
+          class="inline-block text-[10px] font-bold tracking-[0.3em] uppercase border-[1.5px] border-[#FEF3C7]/40 text-[#FEF3C7] px-4 py-[5px] rounded-full mb-4">
+          Our Impact
+        </span>
+        <h2 class="text-4xl md:text-[3.5rem] font-semibold leading-[1.15] text-[#FEF3C7] mb-3">
+          Numbers That Speak for Nature
+        </h2>
+        <p class="text-[0.95rem] text-[#FEF3C7]/75 max-w-[560px] mx-auto leading-[1.7]">
+          Every hive we manage contributes to a bigger mission — restoring bees, biodiversity, and balance to urban
+          ecosystems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 fade-up">
+
+        <div
+          class="bg-[#FEF3C7]/[0.07] border border-[#FEF3C7]/15 rounded-[16px] p-8 text-center hover:bg-[#FEF3C7]/[0.12] transition-colors duration-250">
+          <div
+            class="w-[54px] h-[54px] rounded-[14px] bg-[#FEF3C7]/10 flex items-center justify-center text-[1.4rem] text-[#FDE68A] mx-auto mb-5">
+            <i class="bi bi-hexagon-fill"></i>
+          </div>
+          <div class="impact-num text-[2.8rem] font-black text-[#FEF3C7] leading-none mb-1">1,200+</div>
+          <div class="w-[30px] h-[2px] bg-[#FDE68A] mx-auto my-3 rounded-sm"></div>
+          <div class="text-[0.78rem] font-bold tracking-[0.08em] uppercase text-[#FEF3C7]/65">Hives Managed</div>
+        </div>
+
+        <div
+          class="bg-[#FEF3C7]/[0.07] border border-[#FEF3C7]/15 rounded-[16px] p-8 text-center hover:bg-[#FEF3C7]/[0.12] transition-colors duration-250">
+          <div
+            class="w-[54px] h-[54px] rounded-[14px] bg-[#FEF3C7]/10 flex items-center justify-center text-[1.4rem] text-[#FDE68A] mx-auto mb-5">
+            <i class="bi bi-droplet-fill"></i>
+          </div>
+          <div class="impact-num text-[2.8rem] font-black text-[#FEF3C7] leading-none mb-1">28 T</div>
+          <div class="w-[30px] h-[2px] bg-[#FDE68A] mx-auto my-3 rounded-sm"></div>
+          <div class="text-[0.78rem] font-bold tracking-[0.08em] uppercase text-[#FEF3C7]/65">Honey Harvested</div>
+        </div>
+
+        <div
+          class="bg-[#FEF3C7]/[0.07] border border-[#FEF3C7]/15 rounded-[16px] p-8 text-center hover:bg-[#FEF3C7]/[0.12] transition-colors duration-250">
+          <div
+            class="w-[54px] h-[54px] rounded-[14px] bg-[#FEF3C7]/10 flex items-center justify-center text-[1.4rem] text-[#FDE68A] mx-auto mb-5">
+            <i class="bi bi-flower2"></i>
+          </div>
+          <div class="impact-num text-[2.8rem] font-black text-[#FEF3C7] leading-none mb-1">5 Cr+</div>
+          <div class="w-[30px] h-[2px] bg-[#FDE68A] mx-auto my-3 rounded-sm"></div>
+          <div class="text-[0.78rem] font-bold tracking-[0.08em] uppercase text-[#FEF3C7]/65">Plants Pollinated</div>
+        </div>
+
+        <div
+          class="bg-[#FEF3C7]/[0.07] border border-[#FEF3C7]/15 rounded-[16px] p-8 text-center hover:bg-[#FEF3C7]/[0.12] transition-colors duration-250">
+          <div
+            class="w-[54px] h-[54px] rounded-[14px] bg-[#FEF3C7]/10 flex items-center justify-center text-[1.4rem] text-[#FDE68A] mx-auto mb-5">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <div class="impact-num text-[2.8rem] font-black text-[#FEF3C7] leading-none mb-1">4,800+</div>
+          <div class="w-[30px] h-[2px] bg-[#FDE68A] mx-auto my-3 rounded-sm"></div>
+          <div class="text-[0.78rem] font-bold tracking-[0.08em] uppercase text-[#FEF3C7]/65">Happy Clients</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- SECTION3 -->
+  <section class="bg-[#FEF3C7] py-16 text-[#064E3B]">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <!-- Small Heading -->
+      <p class="text-xs uppercase tracking-[0.3em] text-[#064E3B]/60 mb-6">
+        Trusted By Urban Spaces & Communities
+      </p>
+
+      <!-- Logos -->
+      <div class="flex flex-wrap justify-center items-center gap-10 mb-16 opacity-70">
+
+        <span class="text-sm font-black uppercase tracking-[0.2em] text-[#064E3B]">Eco Homes</span>
+        <span class="text-sm font-black uppercase tracking-[0.2em] text-[#064E3B]">Green City</span>
+        <span class="text-sm font-black uppercase tracking-[0.2em] text-[#064E3B]">Urban Living</span>
+        <span class="text-sm font-black uppercase tracking-[0.2em] text-[#064E3B]">Nature Hub</span>
+        <span class="text-sm font-black uppercase tracking-[0.2em] text-[#064E3B]">Eco Builders</span>
+
+      </div>
+
+      <!-- Intro Content -->
+      <div class="max-w-3xl mx-auto">
+
+        <h2 class="text-3xl md:text-4xl font-black mb-4">
+          Bringing Nature Back to Urban Living 🐝
+        </h2>
+
+        <p class="text-[#064E3B]/70 text-lg">
+          Our mission is to reconnect cities with nature through sustainable beekeeping. We transform rooftops into
+          thriving ecosystems while delivering fresh honey and meaningful experiences.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- SECTION4 -->
+  <section class="bg-white py-24 text-[#064E3B]">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black mb-4">
+          Rooftop Apiary Gallery
+        </h2>
+        <p class="max-w-2xl mx-auto text-[#064E3B]/70">
+          Explore real installations, thriving hives, and beautiful urban beekeeping setups.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- Image 1 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+        <!-- Image 2 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+        <!-- Image 3 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+        <!-- Image 4 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+        <!-- Image 5 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic5.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+        <!-- Image 6 -->
+        <div class="overflow-hidden rounded-2xl group">
+          <img src="images/pic6.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+
+      </div>
+
+      <!-- Button -->
+      <div class="text-center mt-16">
+        <a href="gallery.html"
+          class="inline-block px-10 py-4 text-xs font-bold uppercase tracking-widest bg-[#064E3B] text-white rounded hover:bg-opacity-90 transition">
+          View Full Gallery
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ṢECTION5 -->
+  <section id="newsletter" class="bg-[#FEF3C7] py-24">
+    <div class="max-w-[900px] mx-auto px-6 lg:px-12 fade-up">
+
+      <div
+        class="card bg-white border-2 border-[#064E3B]/10 rounded-[28px] overflow-hidden grid grid-cols-1 md:grid-cols-[1.1fr_1fr]">
+
+        <div
+          class="bg-[#064E3B] p-10 md:p-[clamp(2.5rem,5vw,4rem)] flex flex-col justify-center relative overflow-hidden">
+          <div class="absolute -bottom-6 -right-6 text-[9rem] opacity-12 leading-none select-none hidden md:block">
+            🍯
+          </div>
+
+          <span
+            class="inline-block text-[10px] font-bold tracking-[0.3em] uppercase border-[1.5px] border-[#FEF3C7]/40 text-[#FEF3C7] px-4 py-[5px] rounded-full w-fit mb-5 relative z-10">
+            Stay in the Loop
+          </span>
+          <h2
+            class="font-serif text-2xl md:text-[clamp(1.6rem,3vw,2.3rem)] leading-[1.2] text-[#FEF3C7] mb-4 relative z-10">
+            Get Honey-Sweet Updates from the Hive
+          </h2>
+          <p class="text-[0.88rem] text-[#FEF3C7]/75 leading-[1.7] relative z-10">
+            Join 6,000+ urban beekeeping enthusiasts and receive seasonal tips, harvest news, workshop invites, and
+            exclusive product drops.
+          </p>
+        </div>
+
+        <div class="p-10 md:p-[clamp(2.5rem,5vw,4rem)] flex flex-col justify-center gap-4">
+
+          <div class="flex flex-col">
+            <label for="nl-name" class="text-[0.72rem] font-bold tracking-[0.1em] uppercase text-[#064E3B] mb-[0.3rem]">
+              Your Name
+            </label>
+            <input type="text" id="nl-name" placeholder="Arjun Mehta"
+              class="w-full px-4 py-3 border-[1.5px] border-[#064E3B]/20 rounded-lg text-[0.88rem] font-sans text-[#064E3B] bg-[#FEF3C7] outline-none focus:border-[#064E3B] transition-colors placeholder:text-[#064E3B]/40" />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="nl-email"
+              class="text-[0.72rem] font-bold tracking-[0.1em] uppercase text-[#064E3B] mb-[0.3rem]">
+              Email Address
+            </label>
+            <input type="email" id="nl-email" placeholder="arjun@example.com"
+              class="w-full px-4 py-3 border-[1.5px] border-[#064E3B]/20 rounded-lg text-[0.88rem] font-sans text-[#064E3B] bg-[#FEF3C7] outline-none focus:border-[#064E3B] transition-colors placeholder:text-[#064E3B]/40" />
+          </div>
+
+          <button onclick="handleSubscribe(event)"
+            class="w-full text-center mt-2 px-9 py-[14px] bg-[#064E3B] text-[#FEF3C7] text-[0.7rem] font-bold tracking-[0.18em] uppercase border-2 border-[#064E3B] rounded hover:bg-[#065f46] transition-colors">
+            Join the Hive 🐝
+          </button>
+
+          <p class="text-[0.68rem] text-[#064E3B]/50 leading-[1.6] mt-1">
+            By subscribing you agree to our <a href="#" class="text-[#047857] underline">Privacy Policy</a>. No spam,
+            unsubscribe any time.
+          </p>
+
+          <div id="nl-success"
+            class="hidden bg-[#d1fae5] border border-[#047857] rounded-lg px-[14px] py-[10px] text-[0.82rem] text-[#065f46] mt-2">
+            🎉 Welcome to the hive! Check your inbox.
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <div id="footer"></div>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Core Hive</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] section,
+        [data-theme="dark"] .card {
+            background-color: #000000 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+    </style>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- HERO BANNER -->
+<section class="relative min-h-[85vh] flex items-center justify-center text-center overflow-hidden pt-24 text-[#FEF3C7]">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="images/bg5.avif"
+         class="w-full h-full object-cover"
+         alt="FAQ Support">
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-[#064E3B]/65"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+
+    <!-- Tag -->
+    <span class="inline-block mb-5 px-5 py-2 border border-[#FEF3C7] text-xs uppercase tracking-[0.3em] font-bold">
+      FAQ
+    </span>
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6 whitespace-nowrap">
+      Got Questions? We've Got Answers!
+    </h1>
+
+    <!-- Description -->
+    <p class="text-lg md:text-xl text-[#FEF3C7]/80 mb-8">
+      Find answers to common questions about rooftop beekeeping, services, and safety.
+    </p>
+
+    <!-- Search Box -->
+    <div class="max-w-xl mx-auto mb-10">
+      <input type="text"
+             placeholder="Search your question..."
+             class="w-full px-5 py-4 rounded-lg text-[#064E3B] outline-none">
+    </div>
+
+    <!-- Button -->
+    <a href="#faq"
+       class="btn inline-block px-8 py-4 text-xs font-bold uppercase tracking-widest bg-[#FEF3C7] text-[#064E3B] rounded hover:bg-opacity-90 transition">
+      Browse FAQs
+    </a>
+
+  </div>
+
+  <!-- Bottom Gradient -->
+  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#064E3B] to-transparent"></div>
+
+</section>
+<!-- STATS -->
+<section class="bg-white py-20 text-[#064E3B] border-t border-[#064E3B]/10">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">Trusted by Urban Beekeepers</h2>
+      <p class="text-[#064E3B]/70">We've helped hundreds of clients start their beekeeping journey successfully.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">500+</h3>
+        <p class="text-sm text-[#064E3B]/70">Happy Clients</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">1200+</h3>
+        <p class="text-sm text-[#064E3B]/70">Questions Answered</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">98%</h3>
+        <p class="text-sm text-[#064E3B]/70">Satisfaction Rate</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">5+</h3>
+        <p class="text-sm text-[#064E3B]/70">Years Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION1 -->
+<section id="faq" class="bg-white py-24 text-[#064E3B]">
+
+  <div class="max-w-4xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-[#064E3B]/70">
+        Find answers to the most common questions about our beekeeping services.
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10" id="faq-tabs">
+      <button data-tab="all" class="faq-tab active-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B] bg-[#064E3B] text-[#FEF3C7] transition">All</button>
+      <button data-tab="safety" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Safety</button>
+      <button data-tab="installation" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Installation</button>
+      <button data-tab="maintenance" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Maintenance</button>
+      <button data-tab="honey" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Honey</button>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4" id="faq-list">
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          Is rooftop beekeeping safe?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Yes, our team ensures proper hive placement and maintenance to keep both residents and bees safe.
+        </div>
+      </div>
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          Do I need experience to start?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          No experience is required. We provide full support and training.
+        </div>
+      </div>
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          How much space is required?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          A small rooftop area is enough. We assess your space before installation.
+        </div>
+      </div>
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="maintenance">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          How often is maintenance required?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Maintenance is usually weekly or bi-weekly depending on your plan.
+        </div>
+      </div>
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="honey">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          Can I harvest honey myself?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Yes, we guide you through the process or handle it safely for you.
+        </div>
+      </div>
+
+      <!-- Extra FAQs -->
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          What do bees eat in urban areas?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Bees collect nectar from nearby plants, flowers, and gardens in the city.
+        </div>
+      </div>
+
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          Will bees disturb neighbors?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          No, bees are generally non-aggressive. Proper placement ensures minimal disturbance.
+        </div>
+      </div>
+
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          What happens if bees become aggressive?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Our experts monitor hive behavior and take necessary action to ensure safety.
+        </div>
+      </div>
+
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          Is rooftop beekeeping legal?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Yes, in most areas it is allowed, but we ensure compliance with local guidelines.
+        </div>
+      </div>
+
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
+        <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
+          How long does installation take?
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-content hidden px-5 pb-5 text-sm text-[#064E3B]/70">
+          Installation is usually completed within a few hours after site approval.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- View All Link -->
+    <div class="text-center mt-8" id="view-all-wrap">
+      <a href="#" id="view-all-btn"
+         class="inline-flex items-center gap-2 text-sm font-bold text-[#064E3B] border-b-2 border-[#064E3B] pb-0.5 hover:opacity-70 transition">
+        View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+<!-- SECTION2 -->
+ <section class="bg-[#FEF3C7] py-24 text-[#064E3B]">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">
+        Quick Help Topics
+      </h2>
+      <p class="text-[#064E3B]/70 max-w-2xl mx-auto">
+        Explore the most popular questions and get instant answers.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-shield-check text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Safety Guidelines</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Learn how we ensure safety for you and your surroundings.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-gear text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Installation Process</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Understand how we set up your rooftop hive step-by-step.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-calendar-check text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Maintenance Plans</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Discover our flexible maintenance and care options.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-cash text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Pricing & Plans</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Get details about pricing and available packages.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-flower1 text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Bee Behavior</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Learn how bees behave and interact in urban spaces.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="card bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition group cursor-pointer">
+        <i class="bi bi-droplet text-3xl mb-4"></i>
+        <h3 class="font-bold text-lg mb-2">Honey Harvesting</h3>
+        <p class="text-sm text-[#064E3B]/70">
+          Know how and when honey is collected safely preserved.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+     <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                },
+            },
+        }
+
+  // ---- FAQ accordion ----
+  function bindToggles() {
+    document.querySelectorAll('.faq-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('i');
+        document.querySelectorAll('.faq-content').forEach(item => {
+          if (item !== content) item.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-toggle i').forEach(i => {
+          if (i !== icon) { i.classList.remove('bi-dash-lg'); i.classList.add('bi-plus-lg'); }
+        });
+        content.classList.toggle('hidden');
+        icon.classList.toggle('bi-plus-lg');
+        icon.classList.toggle('bi-dash-lg');
+      });
+    });
+  }
+  bindToggles();
+
+  // ---- Category tabs ----
+  let currentTab = 'all';
+  let allExpanded = false;
+
+  function applyFilter(tab) {
+    currentTab = tab;
+    allExpanded = false;
+    const items = document.querySelectorAll('.faq-item');
+    const viewAllWrap = document.getElementById('view-all-wrap');
+    const viewAllBtn = document.getElementById('view-all-btn');
+
+    // reset all to hidden first
+    items.forEach(item => item.classList.add('hidden'));
+
+    // get matching items
+    const matching = [...items].filter(item =>
+      tab === 'all' || item.dataset.category === tab
+    );
+
+    // show first 5, hide rest
+    matching.forEach((item, idx) => {
+      if (idx < 5) item.classList.remove('hidden');
+    });
+
+    // show/hide View All
+    if (matching.length > 5) {
+      viewAllWrap.classList.remove('hidden');
+      viewAllBtn.innerHTML = 'View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>';
+    } else {
+      viewAllWrap.classList.add('hidden');
+    }
+  }
+
+  document.querySelectorAll('.faq-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.faq-tab').forEach(b => {
+        b.classList.remove('active-tab', 'bg-[#064E3B]', 'text-[#FEF3C7]', 'border-[#064E3B]');
+        b.classList.add('border-[#064E3B]/30', 'text-[#064E3B]');
+      });
+      btn.classList.add('active-tab', 'bg-[#064E3B]', 'text-[#FEF3C7]', 'border-[#064E3B]');
+      btn.classList.remove('border-[#064E3B]/30');
+      applyFilter(btn.dataset.tab);
+    });
+  });
+
+  // ---- View All ----
+  document.getElementById('view-all-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const items = document.querySelectorAll('.faq-item');
+    const matching = [...items].filter(item =>
+      currentTab === 'all' || item.dataset.category === currentTab
+    );
+    if (!allExpanded) {
+      matching.forEach(item => item.classList.remove('hidden'));
+      e.currentTarget.innerHTML = 'Show Less <i class="bi bi-arrow-up-short text-lg"></i>';
+      allExpanded = true;
+    } else {
+      matching.forEach((item, idx) => {
+        if (idx >= 5) item.classList.add('hidden');
+      });
+      e.currentTarget.innerHTML = 'View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>';
+      allExpanded = false;
+    }
+  });
+
+  // init with 'all'
+  applyFilter('all');
+
+    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

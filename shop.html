@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Core Hive</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* RTL */
+        .rtl {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .title {
+            margin-right: 20px !important;
+        }
+
+        /* THEME TOGGLE */
+        :root {
+            --home-bg: #ffffff;
+            --text-color: #111111;
+        }
+
+        [data-theme="dark"] {
+            --home-bg: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--home-bg) !important;
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        [data-theme="dark"] section,
+        [data-theme="dark"] .card {
+            background-color: #000000 !important;
+        }
+
+        [data-theme="dark"] .btn,
+        [data-theme="dark"] .btn1:hover {
+            color: #000000 !important;
+        }
+
+        [data-theme="dark"] body,
+        [data-theme="dark"] p,
+        [data-theme="dark"] h1,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] h3,
+        [data-theme="dark"] h4,
+        [data-theme="dark"] h5,
+        [data-theme="dark"] h6,
+        [data-theme="dark"] span,
+        [data-theme="dark"] li,
+        [data-theme="dark"] a,
+        [data-theme="dark"] i,
+        [data-theme="dark"] label,
+        [data-theme="dark"] table,
+        [data-theme="dark"] th,
+        [data-theme="dark"] td,
+        [data-theme="dark"] div,
+        [data-theme="dark"] small,
+        [data-theme="dark"] strong {
+            color: #ffffff !important;
+        }
+
+        [data-theme="dark"] thead {
+            background-color: #064E3B !important;
+        }
+
+        [data-theme="dark"] .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        [data-theme="dark"] .tag-btn {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: #ffffff !important;
+        }
+    </style>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans">
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- HERO BANNER -->
+<section class="relative min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
+
+  <!-- Background Image -->
+  <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=2000&auto=format&fit=crop"
+       class="absolute inset-0 w-full h-full object-cover"
+       alt="Honey Products">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-[#064E3B]/60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl px-6">
+
+    <!-- Tag -->
+    <span class="inline-block mb-6 px-5 py-2 border border-[#FEF3C7] text-[#FEF3C7] text-xs tracking-[0.3em] uppercase font-bold">
+      Shop
+    </span>
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-6xl font-black text-[#FEF3C7] leading-tight mb-6">
+      Pure Honey & Hive Products 
+    </h1>
+
+    <!-- Description -->
+    <p class="text-lg text-[#FEF3C7]/90 mb-8 max-w-xl mx-auto">
+      Discover ethically sourced honey, beeswax products, and eco-friendly essentials straight from our rooftop hives.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+      <a href="#products"
+         class="btn bg-[#FEF3C7] text-[#064E3B] rounded px-8 py-4 font-bold hover:bg-opacity-90 transition">
+        Shop Now
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- SECTION1 -->
+ <section class="bg-white py-24 text-[#064E3B]">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">
+        Our Products 
+      </h2>
+      <p class="text-[#064E3B]/70 max-w-2xl mx-auto">
+        Handcrafted, natural, and sustainably sourced products from our rooftop hives.
+      </p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- PRODUCT CARD -->
+      <!-- Repeatable Card -->
+      <!-- 1 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+        <img src="images/bg1.avif"
+             class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+        <div class="p-5">
+          <h3 class="font-bold mb-1">Raw Honey</h3>
+          <p class="text-sm text-[#064E3B]/70 mb-2">500g Jar</p>
+          <p class="font-bold mb-4">₹399</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+        <img src="images/img4.avif"
+             class="w-full h-48 object-cover group-hover:scale-110 transition">
+        <div class="p-5">
+          <h3 class="font-bold">Beeswax Candle</h3>
+          <p class="text-sm mb-2">Handmade</p>
+          <p class="font-bold mb-4">₹249</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md hover:shadow-xl">
+        <img src="images/img2.avif"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Honeycomb</h3>
+          <p class="text-sm mb-2">Fresh Cut</p>
+          <p class="font-bold mb-4">₹599</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img10.webp"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Honey Soap</h3>
+          <p class="text-sm mb-2">Organic</p>
+          <p class="font-bold mb-4">₹199</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img1.avif"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Flavored Honey</h3>
+          <p class="text-sm mb-2">Infused</p>
+          <p class="font-bold mb-4">₹449</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img11.jpeg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Bee Pollen</h3>
+          <p class="text-sm mb-2">Superfood</p>
+          <p class="font-bold mb-4">₹699</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img12.jpg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Lip Balm</h3>
+          <p class="text-sm mb-2">Natural</p>
+          <p class="font-bold mb-4">₹149</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img13.jpg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Honey Spread</h3>
+          <p class="text-sm mb-2">Creamy</p>
+          <p class="font-bold mb-4">₹379</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img14.jpg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Honey Tea Mix</h3>
+          <p class="text-sm mb-2">Herbal</p>
+          <p class="font-bold mb-4">₹299</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img15.jpg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Honey Face Pack</h3>
+          <p class="text-sm mb-2">Skincare</p>
+          <p class="font-bold mb-4">₹349</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img16.webp"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Beeswax Wrap</h3>
+          <p class="text-sm mb-2">Reusable</p>
+          <p class="font-bold mb-4">₹299</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="card group bg-[#FEF3C7] rounded-2xl overflow-hidden shadow-md">
+        <img src="images/img17.jpg"
+             class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold">Mini Honey Jar</h3>
+          <p class="text-sm mb-2">Gift Pack</p>
+          <p class="font-bold mb-4">₹199</p>
+          <a href="contact.html" class="block w-full bg-[#064E3B] text-[#FEF3C7] py-2 rounded-lg text-center">Add</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+     <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                    },
+                },
+            },
+        }
+
+    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
