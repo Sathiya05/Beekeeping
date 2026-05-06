@@ -120,9 +120,8 @@
     </span>
 
     <!-- Heading -->
-    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-      Got Questions? <br>
-      We’ve Got Answers ❓
+    <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6 whitespace-nowrap">
+      Got Questions? We've Got Answers!
     </h1>
 
     <!-- Description -->
@@ -149,13 +148,40 @@
   <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#064E3B] to-transparent"></div>
 
 </section>
+<!-- STATS -->
+<section class="bg-white py-20 text-[#064E3B] border-t border-[#064E3B]/10">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">Trusted by Urban Beekeepers</h2>
+      <p class="text-[#064E3B]/70">We've helped hundreds of clients start their beekeeping journey successfully.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">500+</h3>
+        <p class="text-sm text-[#064E3B]/70">Happy Clients</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">1200+</h3>
+        <p class="text-sm text-[#064E3B]/70">Questions Answered</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">98%</h3>
+        <p class="text-sm text-[#064E3B]/70">Satisfaction Rate</p>
+      </div>
+      <div class="group">
+        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">5+</h3>
+        <p class="text-sm text-[#064E3B]/70">Years Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- SECTION1 -->
 <section id="faq" class="bg-white py-24 text-[#064E3B]">
 
   <div class="max-w-4xl mx-auto px-6">
 
     <!-- Heading -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-10">
       <h2 class="text-4xl md:text-5xl font-black mb-4">
         Frequently Asked Questions
       </h2>
@@ -164,11 +190,19 @@
       </p>
     </div>
 
-    <!-- FAQ Items -->
-    <div class="space-y-4">
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10" id="faq-tabs">
+      <button data-tab="all" class="faq-tab active-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B] bg-[#064E3B] text-[#FEF3C7] transition">All</button>
+      <button data-tab="safety" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Safety</button>
+      <button data-tab="installation" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Installation</button>
+      <button data-tab="maintenance" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Maintenance</button>
+      <button data-tab="honey" class="faq-tab px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#064E3B]/30 text-[#064E3B] hover:bg-[#064E3B] hover:text-[#FEF3C7] transition">Honey</button>
+    </div>
 
-      <!-- 1 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+    <!-- FAQ Items -->
+    <div class="space-y-4" id="faq-list">
+
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           Is rooftop beekeeping safe?
           <i class="bi bi-plus-lg"></i>
@@ -178,8 +212,7 @@
         </div>
       </div>
 
-      <!-- 2 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           Do I need experience to start?
           <i class="bi bi-plus-lg"></i>
@@ -189,8 +222,7 @@
         </div>
       </div>
 
-      <!-- 3 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           How much space is required?
           <i class="bi bi-plus-lg"></i>
@@ -200,8 +232,7 @@
         </div>
       </div>
 
-      <!-- 4 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="maintenance">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           How often is maintenance required?
           <i class="bi bi-plus-lg"></i>
@@ -211,8 +242,7 @@
         </div>
       </div>
 
-      <!-- 5 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="honey">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           Can I harvest honey myself?
           <i class="bi bi-plus-lg"></i>
@@ -222,8 +252,8 @@
         </div>
       </div>
 
-      <!-- 6 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <!-- Extra FAQs -->
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           What do bees eat in urban areas?
           <i class="bi bi-plus-lg"></i>
@@ -233,8 +263,7 @@
         </div>
       </div>
 
-      <!-- 7 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           Will bees disturb neighbors?
           <i class="bi bi-plus-lg"></i>
@@ -244,8 +273,7 @@
         </div>
       </div>
 
-      <!-- 8 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="safety">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           What happens if bees become aggressive?
           <i class="bi bi-plus-lg"></i>
@@ -255,8 +283,7 @@
         </div>
       </div>
 
-      <!-- 9 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           Is rooftop beekeeping legal?
           <i class="bi bi-plus-lg"></i>
@@ -266,8 +293,7 @@
         </div>
       </div>
 
-      <!-- 10 -->
-      <div class="border border-[#064E3B]/20 rounded-xl overflow-hidden">
+      <div class="faq-item faq-extra hidden border border-[#064E3B]/20 rounded-xl overflow-hidden" data-category="installation">
         <button class="faq-toggle w-full flex justify-between items-center p-5 font-bold text-left">
           How long does installation take?
           <i class="bi bi-plus-lg"></i>
@@ -277,6 +303,14 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- View All Link -->
+    <div class="text-center mt-8" id="view-all-wrap">
+      <a href="#" id="view-all-btn"
+         class="inline-flex items-center gap-2 text-sm font-bold text-[#064E3B] border-b-2 border-[#064E3B] pb-0.5 hover:opacity-70 transition">
+        View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>
+      </a>
     </div>
 
   </div>
@@ -350,63 +384,8 @@
         <i class="bi bi-droplet text-3xl mb-4"></i>
         <h3 class="font-bold text-lg mb-2">Honey Harvesting</h3>
         <p class="text-sm text-[#064E3B]/70">
-          Know how and when honey is collected safely.
+          Know how and when honey is collected safely preserved.
         </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- SECTION3 -->
- <section class="bg-white py-24 text-[#064E3B] border-t border-[#064E3B]/10">
-
-  <div class="max-w-6xl mx-auto px-6">
-
-    <!-- Heading -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-black mb-4">
-        Trusted by Urban Beekeepers
-      </h2>
-      <p class="text-[#064E3B]/70">
-        We’ve helped hundreds of clients start their beekeeping journey successfully.
-      </p>
-    </div>
-
-    <!-- Stats -->
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
-
-      <!-- Stat -->
-      <div class="group">
-        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">
-          500+
-        </h3>
-        <p class="text-sm text-[#064E3B]/70">Happy Clients</p>
-      </div>
-
-      <!-- Stat -->
-      <div class="group">
-        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">
-          1200+
-        </h3>
-        <p class="text-sm text-[#064E3B]/70">Questions Answered</p>
-      </div>
-
-      <!-- Stat -->
-      <div class="group">
-        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">
-          98%
-        </h3>
-        <p class="text-sm text-[#064E3B]/70">Satisfaction Rate</p>
-      </div>
-
-      <!-- Stat -->
-      <div class="group">
-        <h3 class="text-4xl font-black mb-2 group-hover:scale-110 transition">
-          5+
-        </h3>
-        <p class="text-sm text-[#064E3B]/70">Years Experience</p>
       </div>
 
     </div>
@@ -427,31 +406,93 @@
             },
         }
 
-  const toggles = document.querySelectorAll('.faq-toggle');
-
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.nextElementSibling;
-      const icon = toggle.querySelector('i');
-
-      // Close others (optional)
-      document.querySelectorAll('.faq-content').forEach(item => {
-        if (item !== content) item.classList.add('hidden');
+  // ---- FAQ accordion ----
+  function bindToggles() {
+    document.querySelectorAll('.faq-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('i');
+        document.querySelectorAll('.faq-content').forEach(item => {
+          if (item !== content) item.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-toggle i').forEach(i => {
+          if (i !== icon) { i.classList.remove('bi-dash-lg'); i.classList.add('bi-plus-lg'); }
+        });
+        content.classList.toggle('hidden');
+        icon.classList.toggle('bi-plus-lg');
+        icon.classList.toggle('bi-dash-lg');
       });
+    });
+  }
+  bindToggles();
 
-      document.querySelectorAll('.faq-toggle i').forEach(i => {
-        if (i !== icon) {
-          i.classList.remove('bi-dash-lg');
-          i.classList.add('bi-plus-lg');
-        }
+  // ---- Category tabs ----
+  let currentTab = 'all';
+  let allExpanded = false;
+
+  function applyFilter(tab) {
+    currentTab = tab;
+    allExpanded = false;
+    const items = document.querySelectorAll('.faq-item');
+    const viewAllWrap = document.getElementById('view-all-wrap');
+    const viewAllBtn = document.getElementById('view-all-btn');
+
+    // reset all to hidden first
+    items.forEach(item => item.classList.add('hidden'));
+
+    // get matching items
+    const matching = [...items].filter(item =>
+      tab === 'all' || item.dataset.category === tab
+    );
+
+    // show first 5, hide rest
+    matching.forEach((item, idx) => {
+      if (idx < 5) item.classList.remove('hidden');
+    });
+
+    // show/hide View All
+    if (matching.length > 5) {
+      viewAllWrap.classList.remove('hidden');
+      viewAllBtn.innerHTML = 'View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>';
+    } else {
+      viewAllWrap.classList.add('hidden');
+    }
+  }
+
+  document.querySelectorAll('.faq-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.faq-tab').forEach(b => {
+        b.classList.remove('active-tab', 'bg-[#064E3B]', 'text-[#FEF3C7]', 'border-[#064E3B]');
+        b.classList.add('border-[#064E3B]/30', 'text-[#064E3B]');
       });
-
-      // Toggle current
-      content.classList.toggle('hidden');
-      icon.classList.toggle('bi-plus-lg');
-      icon.classList.toggle('bi-dash-lg');
+      btn.classList.add('active-tab', 'bg-[#064E3B]', 'text-[#FEF3C7]', 'border-[#064E3B]');
+      btn.classList.remove('border-[#064E3B]/30');
+      applyFilter(btn.dataset.tab);
     });
   });
+
+  // ---- View All ----
+  document.getElementById('view-all-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const items = document.querySelectorAll('.faq-item');
+    const matching = [...items].filter(item =>
+      currentTab === 'all' || item.dataset.category === currentTab
+    );
+    if (!allExpanded) {
+      matching.forEach(item => item.classList.remove('hidden'));
+      e.currentTarget.innerHTML = 'Show Less <i class="bi bi-arrow-up-short text-lg"></i>';
+      allExpanded = true;
+    } else {
+      matching.forEach((item, idx) => {
+        if (idx >= 5) item.classList.add('hidden');
+      });
+      e.currentTarget.innerHTML = 'View All FAQs <i class="bi bi-arrow-down-short text-lg"></i>';
+      allExpanded = false;
+    }
+  });
+
+  // init with 'all'
+  applyFilter('all');
 
     </script>
     <script src="navbar.js"></script>
