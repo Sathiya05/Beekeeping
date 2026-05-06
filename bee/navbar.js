@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navbar.innerHTML = `
 <header id="mainNavbar"
-  class="fixed top-0 left-0 w-full z-50 bg-[#FEF3C7] text-[#064E3B] border-b border-[#064E3B] transition-all duration-300">
+  class="fixed top-0 left-0 w-full z-50 bg-[#FEF3C7] text-[#064E3B] border-b border-black/10 transition-all duration-300">
 
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
@@ -178,17 +178,17 @@ document.addEventListener("DOMContentLoaded", () => {
     homeDropdownMenu?.classList.add('hidden');
   });
 
- // Active Link Logic (Mixed Active States)
+  // Active Link Logic (Mixed Active States)
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const allLinks = document.querySelectorAll('#navLinks a, #mobileMenu a, #homeDropdownMenu a, #mobileDropdownMenu a');
 
   allLinks.forEach(link => {
     const href = link.getAttribute('href');
-    
+
     if (href === currentPath) {
       // 1. Make the active link fully opaque and remove hover fading
       link.classList.add('opacity-100');
-      link.classList.remove('hover:opacity-70'); 
+      link.classList.remove('hover:opacity-70');
 
       // 2. Check if the link is inside the Home dropdown
       const isHomeDropdownLink = link.closest('#homeDropdownMenu') || link.closest('#mobileDropdownMenu');
@@ -196,11 +196,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isHomeDropdownLink) {
         // -> FOR HOME DROPDOWN: Make it bold
         link.classList.add('font-black');
-        
+
         // Also make the parent dropdown button bold
         const desktopBtn = document.getElementById('homeDropdownBtn');
         const mobileBtn = document.getElementById('mobileDropdownBtn');
-        
+
         if (desktopBtn) {
           desktopBtn.classList.add('font-black', 'opacity-100');
           desktopBtn.classList.remove('hover:opacity-70');
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (mobileBtn) {
           mobileBtn.classList.add('font-black', 'opacity-100');
         }
-        
+
       } else {
         // -> FOR ALL OTHER LINKS: Add a clean underline
         link.classList.add('underline', 'underline-offset-4', 'decoration-2');
